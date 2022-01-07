@@ -5,8 +5,7 @@ const { employees } = data;
 function getEmployeeByName(employeeName) {
   // seu código aqui
   if (employeeName == null) {
-    const a = {};
-    return a;
+    return {};
   }
   const search = employees.find((a) => a.firstName === employeeName || a.lastName === employeeName);
   console.log(search);
