@@ -3,19 +3,19 @@ const data = require('../data/zoo_data');
 // Source: https://www.delftstack.com/pt/howto/javascript/array-to-objects-javascript/
 // Aula do course sobre map em que aparece os exemplos de exercícios com map.
 // Monitoria do Thales para dúvidas do projeto em que ele explicou sobre o Object.keys nesssa questão
-
+// Monitoria com dúvidas dos alunos em que pude ver outra forma de solucionar a questao
 /* const animalsNames = species.map((item) => item.name);
     const count = species.map((item) => item.residents.length);
     const all = (animals, quant) => animals.map((item, index) => `${item}: ${quant[index]} `);
     const finalArray = all(animalsNames, count).sort();
     console.log(finalArray);
-    Aplicar o reduce no final , porém não consegui . */
+    Tentei aplicar o reduce no final para transformar o array em objeto, porém não consegui . */
 function countAnimals(animal) {
   // seu código aqui
 
   if (animal == null) {
-    const order = species.reduce((acc, values) => {
-      acc[values.name] = values.residents.length;
+    const order = species.reduce((acc, item) => {
+      acc[item.name] = item.residents.length;
       return acc;
     }, {});
     return order;
