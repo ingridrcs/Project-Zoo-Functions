@@ -1,6 +1,6 @@
 const data = require('../data/zoo_data');
-// Source: Monitoria do Thales em que explicou como usar o reduce.
-const ent = [{ name: 'ingrid', age: 5 }];
+// Source: Monitoria do Thales em que explicou como usar o reduce e monitoria de dúvidas.
+
 function countEntrants(entrants) {
   // seu código aqui
   const countAge = entrants.reduce((acc, { age }) => {
